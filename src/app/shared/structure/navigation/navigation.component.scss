@@ -1,0 +1,89 @@
+[nz-menu] {
+  line-height: 64px;
+  padding: 0 10px;
+}
+.navbar-container {
+  position: relative;
+}
+nz-footer {
+  margin: 10px auto;
+
+  padding: 0;
+
+  box-sizing: border-box;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ul {
+    margin-top: 40px;
+    position: relative;
+    width: 350px;
+    border-radius: 40px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    li {
+      background-color: transparent;
+      position: relative;
+      width: 70px;
+      height: 70px;
+      z-index: 1;
+      border-radius: 50%;
+      border: 6px solid var(--primary-color);
+      a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        background-color: transparent;
+        .title {
+          // position: absolute;
+          color: var(--text);
+          font-weight: 400;
+          font-size: 1em;
+          letter-spacing: 0.05em;
+          transition: 0.5s;
+          opacity: 0;
+          transform: translateY(-30px);
+          background-color: transparent;
+          margin: 0;
+        }
+        .icon {
+          position: relative;
+          top: -5px;
+          display: block;
+          line-height: 75px;
+          font-size: 1.75rem;
+          text-align: center;
+          transition: 0.5s;
+          color: var(--text);
+          background-color: transparent;
+          ::ng-deep svg {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    li:hover {
+      background-color: var(--secondary-color) !important;
+      border-radius: 50%;
+      border: 6px solid var(--background);
+      transition: 0.5s;
+      transform: translateY(-40px);
+      a {
+        .title {
+          opacity: 1;
+        }
+        .icon {
+          top: -5px;
+        }
+      }
+    }
+  }
+}
