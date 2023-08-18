@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+* {
+  background-color: #0b0013;
+  color: #fff;
+  font-family: "Tektur", cursive;
+}
+
+:root {
+  --primary-color: #2c0072;
+  --secondary-color: #3523a9;
+  --accent: #d4cd1d;
+  --background: #0b0013;
+  --text: #fff;
+}
+
+// Title
+// font-family: "Tektur", cursive;

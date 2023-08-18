@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SidebarHeaderComponent } from './structure/sidebar-header/sidebar-header.component';
 import { AntdModuleModule } from '../antd.module.module';
+import { NavigationComponent } from './structure/navigation/navigation.component';
 
 @NgModule({
-  declarations: [SidebarHeaderComponent],
+  declarations: [NavigationComponent],
   imports: [CommonModule, AntdModuleModule],
-  exports: [SidebarHeaderComponent, AntdModuleModule],
+  exports: [NavigationComponent, AntdModuleModule],
 })
 export class SharedModuleModule {}
