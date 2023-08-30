@@ -1,0 +1,50 @@
+<div class="title">
+  <h1 nz-typography>PROJETOS</h1>
+</div>
+
+<div class="filter-section-container">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <div class="content">
+    <div class="filter">
+      <form
+        nz-form
+        [nzLayout]="'inline'"
+        [formGroup]="projectForm"
+        (ngSubmit)="submitForm()"
+        class="form-filter"
+      >
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your username!">
+            <nz-input-group nzPrefixIcon="search" nzSearch nzSize="large">
+              <input
+                formControlName="projeto"
+                nz-input
+                placeholder="Encontre o seu projeto..."
+                nzAutosize
+                type="text"
+                (input)="filterProjects(projectForm.get('projeto')?.value)"
+              />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+      </form>
+    </div>
+    <div class="list">
+      <ul>
+        <li *ngFor="let project of filteredProjects" style="color: #fff">
+          <nz-card class="card">
+            {{ project.nome }}
+          </nz-card>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="new-project-container">
+    <button nz-button (click)="newProjectModal()" class="new-project-btn">
+      +
+    </button>
+  </div>
+</div>
