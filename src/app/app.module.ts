@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModuleModule } from './shared/shared.module.module';
+import { ProjectSessionModule } from './modules/project-session/project-session.module';
 
 registerLocaleData(pt);
 
@@ -23,6 +24,7 @@ registerLocaleData(pt);
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModuleModule,
+    ProjectSessionModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: pt_BR }],
   bootstrap: [AppComponent],
